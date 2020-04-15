@@ -1,12 +1,12 @@
 {
-    "name": "python-string-sql",
-    "displayName": "python-string-sql",
-    "description": "highlight python strings as sql",
-    "version": "1.1.0",
-    "publisher": "ptweir",
+    "name": "yaml-string-sql",
+    "displayName": "yaml-string-sql",
+    "description": "highlight yaml strings as sql",
+    "version": "1.0.0",
+    "publisher": "huisben",
     "icon": "docs/logo.png",
     "repository": {
-        "url": "https://github.com/ptweir/python-string-sql"
+        "url": "https://github.com/huisben/yaml-string-sql"
     },
     "engines": {
         "vscode": "^1.32.0"
@@ -19,29 +19,13 @@
         "grammars": [
             {
                 "path": "./syntaxes/highlight-sql-string.json",
-                "scopeName": "python-sql.injection",
+                "scopeName": "yaml-sql.injection",
                 "injectTo": [
-                    "source.python"
+                    "source.yaml"
                 ],
                 "embeddedLanguages": {
                     "meta.embedded.sql": "sql"
                 }
-            },
-            {
-                "path": "./syntaxes/highlight-html-string.json",
-                "scopeName": "python-html.injection",
-                "injectTo": [
-                    "source.python"
-                ],
-                "embeddedLanguages": {
-                    "meta.embedded.block.html": "html"
-                }
-            }
-        ],
-        "snippets": [
-            {
-                "language": "python",
-                "path": "./snippets/python.json"
             }
         ],
         "keybindings": [
@@ -51,7 +35,7 @@
                 "mac": "ctrl+s",
                 "when": "editorTextFocus",
                 "args": {
-                    "langId": "python",
+                    "langId": "yaml",
                     "name": "SQL_highlighted_string"
                 }
             }
