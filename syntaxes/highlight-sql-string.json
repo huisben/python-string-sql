@@ -1,15 +1,13 @@
 {
-  "fileTypes": [
-    "yaml", "yml"
-  ],
-  "injectionSelector": "L:keyword.control.flow.block-scalar.literal.yaml, L:string.unquoted.block.yaml",
+  "fileTypes": ["yaml", "yml"],
+  "injectionSelector": "L:string.unquoted.block.yaml",
   "patterns": [
     {
-      "begin": "( *--sql| *--beginsql| *--begin-sql | *#sql | *#beginsql)",
-      "end": "( *;| *--endsql| *--end-sql | *#endsql)",
-      "captures": {
+      "begin": "\\s*((?:--|#)(?:sql|beginsql|begin-sql))",
+      "end": "(?=^\\s*[\\w\"']+:)",
+      "beginCaptures": {
         "1": {
-          "name": "variable.parameter"
+          "name": "comment.line.double-dash.sql"
         }
       },
       "patterns": [

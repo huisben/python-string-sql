@@ -1,44 +1,58 @@
 {
-    "name": "yaml-string-sql",
-    "displayName": "yaml-string-sql",
-    "description": "highlight yaml strings as sql",
-    "version": "1.0.0",
-    "publisher": "huisben",
-    "icon": "docs/logo.png",
-    "repository": {
-        "url": "https://github.com/huisben/yaml-string-sql"
-    },
-    "engines": {
-        "vscode": "^1.32.0"
-    },
-    "categories": [
-        "Programming Languages",
-        "Snippets"
-    ],
-    "contributes": {
-        "grammars": [
-            {
-                "path": "./syntaxes/highlight-sql-string.json",
-                "scopeName": "yaml-sql.injection",
-                "injectTo": [
-                    "source.yaml"
-                ],
-                "embeddedLanguages": {
-                    "meta.embedded.sql": "sql"
-                }
-            }
+  "name": "yaml-string-sql",
+  "displayName": "yaml-string-sql",
+  "description": "highlight yaml strings as sql",
+  "version": "1.0.0",
+  "publisher": "huisben",
+  "icon": "docs/logo.png",
+  "contributors": [
+    "huisben",
+    "Ville Lahdenvuo <ville.lahdenvuo@gmail.com>"
+  ],
+  "repository": {
+    "url": "https://github.com/huisben/yaml-string-sql"
+  },
+  "engines": {
+    "vscode": "^1.62.0"
+  },
+  "categories": [
+    "Programming Languages",
+    "Snippets"
+  ],
+  "contributes": {
+    "grammars": [
+      {
+        "path": "./syntaxes/highlight-sql-string.json",
+        "scopeName": "yaml-sql.injection",
+        "injectTo": [
+          "source.yaml"
         ],
-        "keybindings": [
-            {
-                "command": "editor.action.insertSnippet",
-                "key": "cmd+s",
-                "mac": "ctrl+s",
-                "when": "editorTextFocus",
-                "args": {
-                    "langId": "yaml",
-                    "name": "SQL_highlighted_string"
-                }
-            }
-        ]
-    }
+        "embeddedLanguages": {
+          "meta.embedded.sql": "sql"
+        }
+      },
+      {
+        "path": "./syntaxes/highlight-shellscript-string.json",
+        "scopeName": "text.yaml.shellscript",
+        "injectTo": [
+          "source.yaml"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.shellscript": "shell"
+        }
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "editor.action.insertSnippet",
+        "key": "cmd+s",
+        "mac": "ctrl+s",
+        "when": "editorTextFocus",
+        "args": {
+          "langId": "yaml",
+          "name": "SQL_highlighted_string"
+        }
+      }
+    ]
+  }
 }

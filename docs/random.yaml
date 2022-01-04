@@ -1,6 +1,11 @@
-body: |
-  --sql
-  select 
-  from 
-  where
-  ;
+example:
+  sql: |
+    --sql
+    select *
+    from foobar
+    where id = 1;
+  bar: foo
+  shell: |
+    #!/bin/bash
+    echo "Hello World" > /tmp/hello.txt
+  foo: bar
