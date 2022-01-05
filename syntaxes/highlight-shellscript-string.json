@@ -8,7 +8,7 @@
     {
       "contentName": "meta.embedded.shellscript",
       "begin": "(?:^|\\s*)(#shell|#!\\/bin\\/(?:env )?(?:bash|sh))",
-      "end": "(?=^\\s*[\\w\"']+:)",
+      "end": "(?=^\\s*(?:- )?[\\w\"']+:)",
       "beginCaptures": {
         "1": {
           "name": "comment.line.number-sign.shell"

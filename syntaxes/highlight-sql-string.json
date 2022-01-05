@@ -4,7 +4,7 @@
   "patterns": [
     {
       "begin": "\\s*((?:--|#)(?:sql|beginsql|begin-sql))",
-      "end": "(?=^\\s*[\\w\"']+:)",
+      "end": "(?=^\\s*(?:- )?[\\w\"']+:)",
       "beginCaptures": {
         "1": {
           "name": "comment.line.double-dash.sql"
