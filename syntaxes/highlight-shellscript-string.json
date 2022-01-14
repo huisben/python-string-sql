@@ -1,13 +1,12 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "name": "Shellscript",
   "scopeName": "text.yaml.shellscript",
   "fileTypes": ["yaml", "yml"],
   "injectionSelector": "L:string.unquoted.block.yaml",
   "patterns": [
     {
       "contentName": "meta.embedded.shellscript",
-      "begin": "(?:^|\\s*)(#shell|#!\\/bin\\/(?:env )?(?:bash|sh))",
+      "begin": "(?:^|\\s*)(#[ ]?(?:syntax )?shell|#!\\/bin\\/(?:env )?(?:bash|sh))",
       "end": "(?=^\\s*(?:- )?[\\w\"']+:)",
       "beginCaptures": {
         "1": {

@@ -23,7 +23,7 @@
     "grammars": [
       {
         "path": "./syntaxes/highlight-sql-string.json",
-        "scopeName": "yaml-sql.injection",
+        "scopeName": "text.yaml.sql",
         "injectTo": [
           "source.yaml"
         ],
@@ -39,6 +39,26 @@
         ],
         "embeddedLanguages": {
           "meta.embedded.shellscript": "shell"
+        }
+      },
+      {
+        "path": "./syntaxes/highlight-powershell-string.json",
+        "scopeName": "text.yaml.powershell",
+        "injectTo": [
+          "source.yaml"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.powershell": "powershell"
+        }
+      },
+      {
+        "path": "./syntaxes/highlight-ini-string.json",
+        "scopeName": "text.yaml.ini",
+        "injectTo": [
+          "source.yaml"
+        ],
+        "embeddedLanguages": {
+          "meta.embedded.ini": "ini"
         }
       }
     ],

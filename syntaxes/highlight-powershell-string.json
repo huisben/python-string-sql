@@ -1,21 +1,21 @@
 {
   "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-  "scopeName": "text.yaml.sql",
+  "scopeName": "text.yaml.powershell",
   "fileTypes": ["yaml", "yml"],
   "injectionSelector": "L:string.unquoted.block.yaml",
   "patterns": [
     {
-      "contentName": "meta.embedded.sql",
-      "begin": "(?:^|\\s*)((?:--[ ]?)(?:syntax )?(?:sql|beginsql|begin-sql))",
+      "contentName": "meta.embedded.powershell",
+      "begin": "(?:^|\\s*)(#[ ]?(?:syntax )?powershell)",
       "end": "(?=^\\s*(?:- )?[\\w\"']+:)",
       "beginCaptures": {
         "1": {
-          "name": "comment.line.double-dash.sql"
+          "name": "comment.line.number-sign.powershell"
         }
       },
       "patterns": [
         {
-          "include": "source.sql"
+          "include": "source.powershell"
         }
       ]
     }

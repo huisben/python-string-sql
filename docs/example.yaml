@@ -1,0 +1,20 @@
+example:
+  sql: |
+    -- syntax sql
+    select *
+    from foobar
+    where id = 1;
+  bar: foo
+  shell: |
+    #!/bin/bash
+    echo "Hello World" > /tmp/hello.txt
+  foo: bar
+  powershell: |
+    # syntax powershell
+    Write-Output "Hello World" > "$Env:Temp/tmp/hello.txt"
+  baz: quz
+  ini: |
+    ; syntax ini
+    [section]
+    key = value
+  qux: fin
