@@ -74,5 +74,8 @@
         }
       }
     ]
+  },
+  "devDependencies": {
+    "vsce": "^2.6.3"
   }
 }
