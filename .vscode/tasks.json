@@ -1,0 +1,16 @@
+{
+  "tasks": [
+    {
+      "type": "shell",
+      "command": "npx vsce package",
+      "group": "build",
+      "label": "Build"
+    },
+    {
+      "type": "shell",
+      "command": "code --install-extension yaml-string-sql-*.vsix",
+      "group": "none",
+      "label": "Install"
+    }
+  ]
+}
